@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BondLens</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h1>BondLens</h1>
+
+            <p>
+                Discover Fixed Income Opportunities
+            </p>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="filter-section">
+
+            <label>
+                Search
+            </label>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Company / ISIN / Scrip Name">
+
+        </div>
+
+        <!-- Credit Rating -->
+
+        <div class="filter-section">
+
+            <label>
+                Credit Rating
+            </label>
+
+            <button
+                id="ratingToggle"
+                class="dropdown-btn">
+
+                Select Ratings ▼
+
+            </button>
+
+            <div
+                id="ratingDropdown"
+                class="checkbox-dropdown">
+
+            </div>
+
+        </div>
+
+        <!-- Frequency -->
+
+        <div class="filter-section">
+
+            <label>
+                Interest Frequency
+            </label>
+
+            <select
+                id="freqFilter">
+
+                <option value="">
+                    All
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- Seller -->
+
+        <div class="filter-section">
+
+            <label>
+                Active Seller
+            </label>
+
+            <select
+                id="sellerFilter">
+
+                <option value="">
+                    All
+                </option>
+
+                <option value="Available">
+                    Available
+                </option>
+
+                <option value="Not Available">
+                    Not Available
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- Years Slider -->
+
+        <div class="filter-section">
+
+            <label>
+                Years To Maturity
+            </label>
+
+            <div id="yearSlider"></div>
+
+            <div class="range-values">
+
+                <span id="yearMinValue">
+                    0
+                </span>
+
+                <span id="yearMaxValue">
+                    0
+                </span>
+
+            </div>
+
+        </div>
+
+        <button
+            id="applyFilters"
+            class="apply-btn">
+
+            Apply Filters
+
+        </button>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- Summary -->
+
+        <div class="summary-cards">
+
+            <div class="summary-card">
+
+                <div class="summary-title">
+                    Total Bonds
+                </div>
+
+                <div
+                    class="summary-value"
+                    id="bondCount">
+                </div>
+
+            </div>
+
+            <div class="summary-card">
+
+                <div class="summary-title">
+                    Highest Yield
+                </div>
+
+                <div
+                    class="summary-value"
+                    id="maxYield">
+                </div>
+
+            </div>
+
+            <div class="summary-card">
+
+                <div class="summary-title">
+                    Active Sellers
+                </div>
+
+                <div
+                    class="summary-value"
+                    id="sellerCount">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div id="cardsContainer"></div>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.8.1/dist/nouislider.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
